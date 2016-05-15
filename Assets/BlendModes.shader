@@ -42,6 +42,7 @@
 				o.uvgrab.xy = (float2(o.vertex.x, o.vertex.y*scale) + o.vertex.w) * 0.5;
 				o.uvgrab.zw = o.vertex.zw;
 				o.uvmain = TRANSFORM_TEX( v.texcoord, _MainTex );
+				o.uvmain.x += _Time.x * 3;
 				return o;
 			}
 
